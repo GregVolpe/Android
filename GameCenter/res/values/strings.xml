@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Game Center</string>
+    <string name="menu_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+    <string name="create_account">Create Account</string>
+    <string name="login">Login</string>
+    <string name="firstname">First Name:</string>
+    <string name="lastname">Last Name:</string>
+    <string name="email_label">"Email: "</string>
+    <string name="gamertag_label">GamerTag:</string>
+    <string name="password1">Password:</string>
+    <string name="warning">**WARNING** GamerTag cannot be changed!</string>
+    <string name="submit">Submit</string>
+    <string name="LoginButton">Login</string>
+    <string name="CreateAccount">Create Account</string>
+    <string name="releaseDate">"Release Date: "</string>
+    <string name="version">"Version: "</string>
+    <string name="downloads">"Downloads: "</string>
+    <string name="gamesPlayed">"Games Played: "</string>
+    <string name="rating">"Rating: "</string>
+    <string name="description">Description:</string>
+    <string name="sampleDescription">This is a sample description of a game.  This game is really awesome except is not a game at all. It only serves the purpose of making you think that it is a game so that we will get a good grade on this assignment.  If we could actually implement games, we would be a lot further along as developers then we actually are.  We pretty much are shooting blindly on this project and hoping we hit a good grade. Now I need to see if it scrolls. ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</string>
+    <string name="push_to_enter_game">Push To Enter Game</string>
+    <string name="gamertag">GamerTag</string>
+    <string name="password">Password</string>
+    <string name="us">\nThis application was created by Greg Volpe, Cody Cullens, Matt Noyce, and Carlos Vicuna. \n</string>
+    <string name="roles">        \nGreg Volpe:    Layout Design, Android Framework, Android Navigation, Language Expert
+        \n\nCody Cullens:  Android to Server connection, Android Networking, Database Design, Database Implementation
+        \n\nCarlos Vicuna: Database Design, Database Implementaion
+        \n\nMatt Noyce:    Documentation, Database Design, Database Implementation</string>
+    <string name="about_roles">Roles:</string>
+    <string name="myaccout_update">Update Account Information</string>
+    <string name="title_activity_database_acess">DatabaseAcessActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="resource">Resources Used</string>
+    <string name="quote">"</string>
+
+</resources>

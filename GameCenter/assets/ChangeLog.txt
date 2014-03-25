@@ -1,0 +1,398 @@
+**Version 3.5**
+- Added ability to download .APK file from web server
+- Removed unnecessary classes
+- Repackage classes according to design
+
+**Version 3.0**
+Final release version.
+
+-Added new tab to see all users of the application
+- Dynamic install / uninstall buttons depending on whether you own the game or not
+- My Games tab is up and running
+- Significant database queries run on separate threads to keep GUI more responsive
+- Writing to the database for new account / account updates
+- Added ability to verify user input on the Fill Data Fragment
+	- If input is not filled in, fragment will be replaced with a new fill form
+	- If gamerTag is used, error message will display and fragment will be replaced
+	- If passwords are not equal, error message will display and fragment will be replaced
+
+*Class List*			
+FillDataFragment		App Framework
+FragmentTab1			App Framework
+FragmentTab2			App Framework
+FragmentTab3			App Framework
+FragmentTab4			App Framework
+GameDataFragment		App Framework
+MainActivity			App Framework
+TabListener				App Framework
+GameList				App Framework
+loginFragment			App Framework
+StableArrayAdapter		App Framework
+aboutFragment			App Framework
+myAccountFragment		App Framework
+LeaderboardFragment		App Framework
+ChangeLogFragment		App Framework
+HelpFragment			App Framework
+MyGamesQueryRunnable	App Framework
+AllGamesQueryRunnable	App Framework
+
+Account					Java Core
+DatabaseAccess			Java Core
+Game					Java Core
+Leaderboard				Java Core
+
+
+**Version 2.5**
+- Implemented threading to take load off of main thread
+- Implemented checkbox to GamerTag, password2, and password2 fields on fill data XML to visually identify a good gamertag
+	and subsequent java logic in fillDataFragment.java
+
+*Class List*			
+FillDataFragment		App Framework
+FragmentTab1			App Framework
+FragmentTab2			App Framework
+FragmentTab3			App Framework
+GameDataFragment		App Framework
+MainActivity			App Framework
+TabListener				App Framework
+GameList				App Framework
+loginFragment			App Framework
+StableArrayAdapter		App Framework
+aboutFragment			App Framework
+myAccountFragment		App Framework
+LeaderboardFragment		App Framework
+ChangeLogFragment		App Framework
+Account					Java Core
+DatabaseAccess			Java Core
+Game					Java Core
+Leaderboard				Java Core
+MyGamesQueryRunnable	Java Core
+AllGamesQueryRunnable	Java Core
+
+*XML Layout List*
+activity_main
+fill_data
+fragmenttab1
+fragmenttab2
+fragmenttab3
+game_data_page
+login_page
+start_page
+gamelist
+about
+myaccount
+leaderboard
+main_menu
+changelog
+
+** Version 2.3.5 **
+
+-fix issue where keyboard would stay open after entering login info
+	or create user info
+-added background image on login, create data and about us pages
+-set my account page as an action item in the action bar
+-fix issue where-selecting a tab while the non-standard view is shown 
+	on the page does not automatically re-draw the list for the tab
+-created android release key authentication to be able to distribute the app
+	to class for testing.
+-set app permissions to advise user of network communication (APP -> DB)
+-Javadoc implementation
+
+** Version 2.3.4 **
+
+-Enable edit account option in my account XML
+-Build account fragment
+-password cannot be null or empty string
+-set entire view scrollable where applicable
+-add leaderboard Fragment
+-add leaderboard XML
+-fix startpage / fill data fragment view errors
+	app now exits if no data is entered on fill data page then submit button is 
+	pressed then back button is pressed. (Better then drawing one view on top
+	of another).
+
+*Class List*			
+FillDataFragment		App Framework
+FragmentTab1			App Framework
+FragmentTab2			App Framework
+FragmentTab3			App Framework
+GameDataFragment		App Framework
+MainActivity			App Framework
+TabListener				App Framework
+GameList				App Framework
+loginFragment			App Framework
+StableArrayAdapter		App Framework
+aboutFragment			App Framework
+myAccountFragment		App Framework
+LeaderboardFragment		App Framework
+Account					Java Core
+DatabaseAccess			Java Core
+Game					Java Core
+Leaderboard				Java Core
+
+*XML Layout List*
+activity_main
+fill_data
+fragmenttab1
+fragmenttab2
+fragmenttab3
+game_data_page
+login_page
+start_page
+gamelist
+about
+myaccount
+leaderboard
+main_menu
+
+** Version 2.3.3 **
+
+-Added functionality to check fill data input
+	If passwords are NOT the same fragment is replaced
+	fname,lname,email,gamertag are carried over to the new fragment
+	pass1, pass2 must be re-entered
+	new account created on successful input
+
+-Application saves Account information (except Password) on logout
+
+-Enabled Login Fragment User can now login and verify password based on local copy
+	need to implement database password look up
+
+	
+-Added menu options:
+	1. Main Menu:
+		A. File
+			1. About - Description of application, creators, roles
+			2. Help - (lead to possible web page for help)
+			
+		B. My Account - Display My Account information based on local account
+		
+		C. Logout - Logout and Exit application
+			set saved instance state as logout
+			upon re-enter program user must create account or login
+			
+			
+*Class List*			
+FillDataFragment		App Framework
+FragmentTab1			App Framework
+FragmentTab2			App Framework
+FragmentTab3			App Framework
+GameDataFragment		App Framework
+MainActivity			App Framework
+TabListener				App Framework
+GameList				App Framework
+loginFragment			App Framework
+StableArrayAdapter		App Framework
+aboutFragment			App Framework
+myAccountFragment		App Framework
+Account					Java Core
+DatabaseAccess			Java Core
+Game					Java Core
+Leaderboard				Java Core
+
+*XML Layout List*
+activity_main
+fill_data
+fragmenttab1
+fragmenttab2
+fragmenttab3
+game_data_page
+login_page
+start_page
+gamelist
+about
+myaccount
+main_menu
+
+** Version 2.3.2 **
+
+-Added the function to save the login status to file within the application
+	Allows app functionality if no internet connection
+	
+-Added the function to disable the action bar (tabs) while not logged in
+	once logged in or account created, the action bar appears giving user 
+	full functionality
+	
+-Refractor package name: update to com.CS360.GameCenter
+-Re-Name application: GameCenter
+-Update icon to GameCenter icon
+-Update app theme to Holo Dark
+
+*No change to class list
+*No change to XML list
+
+** Version 2.3.1 **
+Redesigned navigation
+Added proof of concept logic to prevent startpage from being displayed once logged it
+or new user created.  Automatically switch to All games view once logged in
+
+*Class List*
+FillDataFragment		App Framework
+FragmentTab1			App Framework
+FragmentTab2			App Framework
+FragmentTab3			App Framework
+GameDataFragment		App Framework
+MainActivity			App Framework
+TabListener				App Framework
+GameList				App Framework
+loginFragment			App Framework
+StableArrayAdapter		App Framework
+Account					Java Core
+DatabaseAccess			Java Core
+Game					Java Core
+Leaderboard				Java Core
+
+*XML Layout List*
+activity_main
+fill_data
+fragmenttab1
+fragmenttab2
+fragmenttab3
+game_data_page
+login_page
+start_page
+gamelist
+
+** Version 2.3 **
+
+Creation of Java backbone framework classes: No implementation framework ONLY
+Database connection experimenting on separate project: partial implementation
+
+*Class List*
+FillDataFragment		App Framework
+FragmentTab1			App Framework
+FragmentTab2			App Framework
+FragmentTab3			App Framework
+GameDataFragment		App Framework
+MainActivity			App Framework
+TabListener				App Framework
+GameList				App Framework
+loginFragment			App Framework
+StableArrayAdapter		App Framework
+Account					Java Core
+DatabaseAccess			Java Core
+Game					Java Core
+Leaderboard				Java Core
+
+
+*XML Layout List*
+activity_main
+fill_data
+fragmenttab1
+fragmenttab2
+fragmenttab3
+game_data_page
+login_page
+start_page
+gamelist
+
+
+** Version 2.2 **
+
+Refined list views: full implementation
+Extended ArrayAdapter to provide stable Array base
+
+*Class List*
+FillDataFragment
+FragmentTab1
+FragmentTab2
+FragmentTab3
+GameDataFragment
+MainActivity
+TabListener
+GameList
+loginFragment
+StableArrayAdapter
+
+*XML Layout List*
+activity_main
+fill_data
+fragmenttab1
+fragmenttab2
+fragmenttab3
+game_data_page
+login_page
+start_page
+gamelist
+
+
+** Version 2.1 **
+Determined and corrected build failure cause: related to navigation and exchnage of fragments
+
+*Class List*
+FillDataFragment
+FragmentTab1
+FragmentTab2
+FragmentTab3
+GameDataFragment
+MainActivity
+TabListener
+GameList
+loginFragment
+
+*XML Layout List*
+activity_main
+fill_data
+fragmenttab1
+fragmenttab2
+fragmenttab3
+game_data_page
+login_page
+start_page
+gamelist
+
+
+** Version 2.0 **
+
+Implement Lists inside fragments
+Refine tab navigation
+Design Layouts
+	gamelist.xml
+Build failure cause undetermined
+
+*Class List*
+FillDataFragment
+FragmentTab1
+FragmentTab2
+FragmentTab3
+GameDataFragment
+MainActivity
+TabListener
+GameList
+loginFragment
+
+*XML Layout List*
+activity_main
+fill_data
+fragmenttab1
+fragmenttab2
+fragmenttab3
+game_data_page
+login_page
+start_page
+gamelist
+
+
+** Version 1.0**
+
+Basic app layout working with fragments, managing tabs, setting visibilities and building layouts
+Created following classes / XML files to provide basic unrefined functionality
+
+*Class List*
+FillDataFragment
+FragmentTab1
+FragmentTab2
+FragmentTab3
+GameDataFragment
+MainActivity
+TabListener
+
+*XML Layout List*
+activity_main
+fill_data
+fragmenttab1
+fragmenttab2
+fragmenttab3
+game_data_page
+login_page
+start_page

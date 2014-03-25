@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/file"
+        android:title="File">
+	    <menu>
+			<!-- FILE SUB-MENU -->
+	        <item android:id="@+id/about"
+	          android:text="About"
+	          android:title="About"
+	          android:showAsAction="ifRoom"/>
+	        
+	    	<item android:id="@+id/help"
+	          android:text="Help"
+	          android:title="Help" />
+	   	</menu>
+   	</item>
+   	<item android:id="@+id/myaccount"
+   	    android:text="My Account"
+   	    android:title="My Account"
+   	    android:visible="true"
+   	    android:showAsAction="ifRoom"/>
+   	<item android:id="@+id/changelog"
+	          android:text="Change Log"
+	          android:title="Change Log"/>
+   	<item android:id="@+id/logout"
+   	    android:text="Logout"
+   	    android:title="Logout"/>
+
+</menu>

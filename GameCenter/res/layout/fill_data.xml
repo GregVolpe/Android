@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/fnamelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dp"
+        android:text="@string/firstname"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/fnameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lnamelabel"
+        android:layout_toRightOf="@+id/fnamelabel"
+        android:ems="10"
+        android:hint="Joe"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true" />
+    <requestFocus />
+
+    <EditText
+        android:id="@+id/lnameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fnameInput"
+        android:layout_below="@+id/fnameInput"
+        android:ems="10"
+        android:hint="Shmo"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/lnamelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fnamelabel"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/lnameInput"
+        android:text="@string/lastname"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lnameInput"
+        android:layout_below="@+id/lnameInput"
+        android:layout_toLeftOf="@+id/filldata_emailcheck"
+        android:ems="10"
+        android:hint="Email@something.com"
+        android:inputType="textEmailAddress" >
+        
+    </EditText>
+
+    <TextView
+        android:id="@+id/emaillabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/emailInput"
+        android:layout_alignRight="@+id/lnamelabel"
+        android:text="@string/email_label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/gamertagInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/emailInput"
+        android:layout_below="@+id/emailInput"
+        android:layout_toLeftOf="@+id/filldata_emailcheck"
+        android:ems="10"
+        android:hint="Enter Gamertag"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/gamerTagLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gamertagInput"
+        android:layout_alignLeft="@+id/lnamelabel"
+        android:text="@string/gamertag_label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gamertagInput"
+        android:layout_toLeftOf="@+id/filldata_password1"
+        android:layout_toRightOf="@+id/emaillabel"
+        android:ems="10"
+        android:hint="Type password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/passwordInput"
+        android:layout_alignRight="@+id/emaillabel"
+        android:text="@string/password1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/passwordInput2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordInput"
+        android:layout_toLeftOf="@+id/filldata_password1"
+        android:layout_toRightOf="@+id/gamerTagLabel"
+        android:ems="10"
+        android:hint="Retype password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/passwordInput2"
+        android:layout_toLeftOf="@+id/passwordInput2"
+        android:text="@string/password1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TextView04"
+        android:layout_marginTop="17dp"
+        android:text="@string/submit" />
+
+    <TextView
+        android:id="@+id/fill_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView04"
+        android:layout_alignRight="@+id/passwordInput2"
+        android:layout_below="@+id/submitButton"
+        android:text="@string/warning"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/filldata_password1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView05"
+        android:layout_alignBottom="@+id/TextView05"
+        android:layout_alignParentRight="true" />
+
+    <CheckBox
+        android:id="@+id/filldata_password2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView04"
+        android:layout_alignBottom="@+id/TextView04"
+        android:layout_toRightOf="@+id/passwordInput2" />
+
+    <CheckBox
+        android:id="@+id/filldata_emailcheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gamertagInput"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>
+</ScrollView>
