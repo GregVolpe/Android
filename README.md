@@ -1,4 +1,4 @@
-Android
+Android Game Center Application
 =======
 To view the source code of this project navigate through the GameCenter/src folder.  You can also import this project
 into the Android SDK for compilation and testing on a virtual Android Device.  Alternatively you can load the signed APK
